@@ -1,0 +1,91 @@
+@use '../../scss/breakPoints' as *;
+
+.footer {
+    // background: radial-gradient(ellipse at 30px, #1a0d05 0%, #0b0501 100%);
+    background-color: #0f0702;
+    color: #515151;
+    padding: 40px 0;
+    font-size: 14px;
+    line-height: 17px;
+
+    &__container {
+        width: $ct-m;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__logo {
+        font-size: 24px;
+        height: 25px;
+        font-weight: 700;
+        background: linear-gradient(to left, #FF6432, #FFA228);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 10px;
+    }
+
+    &__columns {
+        display: grid;
+        row-gap: 20px;
+        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__column {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+
+            li {
+                font-size: 14px;
+                color: #a3a3a3;
+                opacity: .5;
+                margin-bottom: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #A3A3A3;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+
+    }
+
+    &__phone {
+        height: 25px;
+        background: linear-gradient(to left, #FF612E, #FFA32B);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: flex;
+        align-items: center;
+
+        span {
+            color: #fff;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: 12px;
+    }
+
+    &__social--el {
+        width: 25px;
+        height: 25px;
+    }
+}

@@ -1,0 +1,234 @@
+@use '../../scss/breakPoints' as *;
+// @import "../../assets/img/headerLogo/lightning.svg";
+
+.hero {
+    // background: radial-gradient(ellipse at 30px, #1a0d05 0%, #0b0501 100%);
+    background-color: #160b03;
+    // background-color: #00ff4c;
+    padding-bottom: 70px;
+
+    &__container {
+        width: $ct-m;
+        margin: 0 auto;
+
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 25px;
+    }
+
+    &__logo {
+        background: linear-gradient(261.69deg,
+                rgba(255, 100, 50, 1) 0%,
+                rgba(255, 162, 40, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: left;
+        font-family: "Muller-ExtraBold", sans-serif;
+        font-size: 24px;
+        line-height: 26px;
+        font-weight: 800;
+        position: relative;
+        text-transform: lowercase;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__cart-btn,
+    &__menu-btn {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__menu-btn {
+        img {
+            width: 30px;
+            height: 30px;
+            display: block;
+        }
+    }
+
+    &__cart-btn {
+        background: linear-gradient(261.69deg,
+                rgba(255, 100, 50, 1) 0%,
+                rgba(255, 162, 40, 1) 100%);
+        border-radius: 525px;
+        padding: 5px;
+
+        img {
+            width: 25px;
+            height: 25px;
+            display: block;
+        }
+    }
+
+    &__image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 70px 75px 70px;
+
+        position: relative;
+    }
+
+    &__main-img {
+        width: 240px;
+        height: 365px;
+    }
+
+    &__decoration {
+        position: absolute;
+
+        &--fries {
+            left: 10px;
+            bottom: 35px;
+        }
+
+        &--pizza {
+            right: 10px;
+            top: -5px;
+        }
+    }
+
+    &__title {
+        color: #ffffff;
+        font-family: "Muller-ExtraBold", sans-serif;
+        font-size: 35px;
+        line-height: 45px;
+        font-weight: 800;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    &__title span {
+        position: relative;
+        margin-left: 30px;
+    }
+
+    &__title span::before {
+        position: absolute;
+        content: '';
+        background-image: url('/src/assets/img/headerLogo/lightning.svg');
+        top: 60%;
+        left: -35px;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__text {
+        font-family: "Muller-Regular", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        position: relative;
+        color: #a3a3a3;
+    }
+
+    &__text span {
+        color: #ffffff;
+    }
+
+    &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__modal--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__modal--content {
+    position: relative;
+    background: #fff;
+    padding: 24px 32px;
+    border-radius: 12px;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  &__modal--close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+  }
+
+  &__order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+  }
+
+  &__confirm-order{
+    padding: 10px 20px;
+    background: linear-gradient(to right, #FF5924, #FFA229);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: linear-gradient(to right, #FFA229, #FF5924);
+    }
+  }
+}
+
+
+
+
+
+// .header {
+//      background: radial-gradient(ellipse at 30px, #1a0d05 0%, #0b0501 100%);
+//     background-color: #160b03;
+
+//     &__container {
+//         width: $ct-m;
+//         margin: 0 auto;
+//         display: flex;
+//     }
+// }

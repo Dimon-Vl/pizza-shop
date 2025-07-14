@@ -1,0 +1,180 @@
+.pizza-card {
+    width: 180px;
+    height: 315px;
+    padding-top: 35px;
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #210A01;
+        height: 100%;
+        border-radius: 18px;
+        padding: 50px 20px 15px 20px;
+    }
+
+    &__img {
+        position: absolute;
+        top: -50px;
+        height: 35%;
+    }
+
+    &__name {
+        // font-family: 'Muller';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+    }
+
+    &__description {
+        // font-family: 'Muller';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #A3A3A3;
+        margin-bottom: 12px;
+        height: 36px;
+    }
+
+    &__sizes {
+        display: flex;
+        gap: 22px;
+        margin-bottom: 12px;
+    }
+
+    &__size-btn {
+        // font-family: 'Muller';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #A3A3A3;
+        border: 2px solid #A3A3A3;
+        border-radius: 50%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    &__size-btn.active {
+        background: linear-gradient(to right, #FF5924, #FFA229);
+        color: white;
+        border: none;
+    }
+
+
+    &__ingredients-btn {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        cursor: pointer;
+        background-color: #210A01;
+        border: none;
+        border-radius: 50px;
+        padding: 6px 25px;
+        margin-bottom: 12px;
+        background: linear-gradient(to left, #FF5924, #FFA229);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+    &__ingredients-btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(to right, #FFA229, #FF5924);
+        border-radius: 50px;
+        padding: 2px;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        mask:
+            linear-gradient(white 0 0) content-box,
+            linear-gradient(white 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+
+    &__order {
+        display: flex;
+        gap: 28px;
+        margin-bottom: 12px;
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 17px;
+        color: #FFFFFF;
+    }
+
+    &__price span {
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 11px;
+        vertical-align: super;
+    }
+
+    &__order-btn {
+        padding: 6px 20px;
+        font-size: 12px;
+        color: white;
+        background: linear-gradient(135deg, #FF5924 0%, #FFA229 100%);
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    &__counter {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__decrease,
+    &__increase {
+        font-size: 12px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.2s ease;
+    }
+
+    &__decrease {
+        border: 2px solid #A3A3A3;
+        background: transparent;
+        color: #A3A3A3;
+    }
+
+    &__increase {
+        background: linear-gradient(135deg, #FF5924 0%, #FFA229 100%);
+        border: none;
+        color: white;
+    }
+
+    &__quantity {
+        font-size: 16px;
+        color: #A3A3A3;
+        min-width: 10px;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Аргентина",
+    "price": 7.35,
+    "urlImg": "argentina.png",
+    "id": "p0",
+    "size": [22, 28, 33],
+    "categories": ["meat", "mushroom"],
+    "ingredients": ["цибуля", "картопля", "помідор", "гриби", "сир", "оливки", "м'ясо"]
+  },
+  {
+    "name": "Грибна",
+    "price": 6.35,
+    "urlImg": "gribnaya.png",
+    "id": "p1",
+    "size": [22, 28, 33],
+    "categories": ["vegetarian", "mushroom"],
+    "ingredients": ["цибуля", "картопля", "помідор", "гриби", "сир", "оливки"]
+  },
+  {
+    "name": "Томатна",
+    "price": 7.35,
+    "urlImg": "tomato.png",
+    "id": "p2",
+    "size": [22, 28, 33],
+    "categories": ["vegetarian"],
+    "ingredients": ["цибуля", "картопля", "помідор", "гриби", "сир", "оливки"]
+  },
+  {
+    "name": "Італійська x2",
+    "price": 8.35,
+    "urlImg": "italianx2.png",
+    "id": "p3",
+    "size": [22, 28, 33],
+    "categories": ["meat"],
+    "ingredients": ["цибуля", "картопля", "помідор", "гриби", "сир", "оливки", "м'ясо"]
+  },
+  {
+    "name": "Італійська",
+    "price": 8.35,
+    "urlImg": "italian.png",
+    "id": "p4",
+    "size": [22, 28, 33],
+    "categories": ["meat"],
+    "ingredients": ["цибуля", "картопля", "помідор", "гриби", "сир", "оливки", "м'ясо"]
+  },
+  {
+    "name": "Венеція",
+    "price": 7.35,
+    "urlImg": "venecia.png",
+    "id": "p5",
+    "size": [22, 28, 33],
+    "categories": ["meat"],
+    "ingredients": ["цибуля", "картопля", "помідор", "гриби", "сир", "оливки", "м'ясо"]
+  },
+  {
+    "name": "М’ясна",
+    "price": 9.35,
+    "urlImg": "meat.png",
+    "id": "p6",
+    "size": [22, 28, 33],
+    "categories": ["meat"],
+    "ingredients": ["цибуля", "картопля", "помідор", "гриби", "сир", "оливки", "м'ясо"]
+  },
+  {
+    "name": "Сирна",
+    "price": 8.35,
+    "urlImg": "cheese.png",
+    "id": "p7",
+    "size": [22, 28, 33],
+    "categories": ["vegetarian"],
+    "ingredients": ["цибуля", "картопля", "помідор", "гриби", "сир", "оливки"]
+  }
+]

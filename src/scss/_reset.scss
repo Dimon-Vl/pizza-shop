@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+ outline: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+li{
+  list-style-type: none;
+}
