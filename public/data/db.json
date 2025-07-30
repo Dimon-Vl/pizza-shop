@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Аргентина",
+    "price": 7.35,
+    "urlImg": "argentina.png",
+    "id": "p0",
+    "size": [22, 28, 33],
+    "categories": ["meat"],
+    "ingredients": ["моцарела", "помідори", "яловичина", "цибуля", "соус BBQ", "орегано"],
+    "type":"pizza"
+  },
+  {
+    "name": "Грибна",
+    "price": 6.35,
+    "urlImg": "gribnaya.png",
+    "id": "p1",
+    "size": [22, 28, 33],
+    "categories": ["vegetarian", "mushroom"],
+    "ingredients": ["моцарела", "печериці", "цибуля", "вершковий соус", "зелень"],
+     "type":"pizza"
+  },
+  {
+    "name": "Томатна",
+    "price": 7.35,
+    "urlImg": "tomato.png",
+    "id": "p2",
+    "size": [22, 28, 33],
+    "categories": ["vegetarian"],
+    "ingredients": ["моцарела", "томатний соус", "в'ялені помідори", "базилік", "оливкова олія"],
+     "type":"pizza"
+  },
+  {
+    "name": "Італійська x2",
+    "price": 8.35,
+    "urlImg": "italianx2.png",
+    "id": "p3",
+    "size": [22, 28, 33],
+    "categories": ["meat"],
+    "ingredients": ["моцарела", "пепероні", "шинка", "салямі", "томатний соус", "орегано"],
+     "type":"pizza"
+  },
+  {
+    "name": "Італійська",
+    "price": 8.35,
+    "urlImg": "italian.png",
+    "id": "p4",
+    "size": [22, 28, 33],
+    "categories": ["meat"],
+    "ingredients": ["моцарела", "пепероні", "томатний соус", "оливки", "базилік"],
+     "type":"pizza"
+  },
+  {
+    "name": "Венеція",
+    "price": 7.35,
+    "urlImg": "venecia.png",
+    "id": "p5",
+    "size": [22, 28, 33],
+    "categories": ["meat", "seafood"],
+    "ingredients": ["моцарела", "креветки", "часник", "петрушка", "вершковий соус"],
+     "type":"pizza"
+  },
+  {
+    "name": "М’ясна",
+    "price": 9.35,
+    "urlImg": "meat.png",
+    "id": "p6",
+    "size": [22, 28, 33],
+    "categories": ["meat"],
+    "ingredients": ["моцарела", "шинка", "салямі", "бекон", "соус BBQ"],
+     "type":"pizza"
+  },
+  {
+    "name": "Сирна",
+    "price": 8.35,
+    "urlImg": "cheese.png",
+    "id": "p7",
+    "size": [22, 28, 33],
+    "categories": ["vegetarian"],
+    "ingredients": ["моцарела", "чеддер", "дорблю", "пармезан", "вершковий соус"],
+     "type":"pizza"
+  },
+   {
+    "name": "Кока-Кола",
+    "price": 1.5,
+    "urlImg": "coca-cola.png",
+    "id": "d1",
+    "size": [330, 500],
+    "categories": ["drink"],
+    "ingredients": ["газований напій"],
+     "type":"drink"
+  },
+  {
+    "name": "Моршинська",
+    "price": 1.0,
+    "urlImg": "morshinska.png",
+    "id": "d2",
+    "size": [500],
+    "categories": ["drink"],
+    "ingredients": ["вода мінеральна негазована"],
+     "type":"drink"
+  },
+  {
+    "name": "Сік апельсиновий",
+    "price": 1.2,
+    "urlImg": "juice-orange.png",
+    "id": "d3",
+    "size": [330],
+    "categories": ["drink"],
+    "ingredients": ["апельсиновий сік"],
+     "type":"drink"
+  }
+]

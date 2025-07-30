@@ -1,19 +1,35 @@
 @use '../../scss/breakPoints' as *;
 
 .footer {
-    // background: radial-gradient(ellipse at 30px, #1a0d05 0%, #0b0501 100%);
     background-color: #0f0702;
     color: #515151;
     padding: 40px 0;
     font-size: 14px;
     line-height: 17px;
+    display: flex;
+    justify-content: center;
 
     &__container {
-        width: $ct-m;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: 30px;
+        padding: 0 20px;
+
+        width: $bp-xl;
+        @media (max-width: $bp-xl) {
+            width: 100%;
+        }
+
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 50px;
+        @media (max-width: $bp-lg) {
+            display: block;
+            width: 100%;
+        }
     }
 
     &__logo {
@@ -31,7 +47,10 @@
         display: grid;
         row-gap: 20px;
         justify-content: space-between;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        @media (max-width: $bp-md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__column {

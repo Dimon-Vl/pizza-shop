@@ -1,20 +1,35 @@
-import { useState } from 'react'
-import Modal from './Modal';
+import { useState, useEffect } from 'react'
+import Modal from '../modal/Modal';
 
 import basket from '../../assets/img/headerLogo/basket.svg'
 import menu from '../../assets/img/headerLogo/menu.svg'
 import pizzaMain from '../../assets/img/headerLogo/pizza-main.png'
 import fries from '../../assets/img/headerLogo/fries.png'
 import pizzaSlice from '../../assets/img/headerLogo/pizza-slice.png'
-import './_hero.scss'
+import './hero.scss'
 
 export default function Hero() {
     const [isModalOpen, setModalOpen] = useState(false)
-    const orderData = JSON.parse(localStorage.getItem('order') || '[]');
+    const [orderData, setOrderData] = useState([])
+
+    useEffect(() => {
+        setOrderData(JSON.parse(localStorage.getItem('order') || '[]'))
+    }, [isModalOpen])
+
     function handleConfirmOrder() {
         localStorage.removeItem('order')
+        setOrderData([])
         alert('Замовлення прийнято!')
         setModalOpen(false)
+    }
+
+    function handleClearOrder() {
+        localStorage.removeItem('order')
+        setOrderData([])
+    }
+
+    function removeItem() {
+        
     }
 
     return (
@@ -37,9 +52,11 @@ export default function Hero() {
                 </header>
 
                 <div className="hero__image-wrapper">
-                    <img src={pizzaMain} alt="Main Pizza" className="hero__main-img" />
-                    <img src={fries} className="hero__decoration hero__decoration--fries" alt="" />
-                    <img src={pizzaSlice} className="hero__decoration hero__decoration--pizza" alt="" />
+                    <div className="hero__image-wrapper-container">
+                        <img src={pizzaMain} alt="Main Pizza" className="hero__main-img" />
+                        <img src={fries} className="hero__decoration hero__decoration--fries" alt="" />
+                        <img src={pizzaSlice} className="hero__decoration hero__decoration--pizza" alt="" />
+                    </div>
                 </div>
 
                 <div className="hero__content">
@@ -79,6 +96,7 @@ export default function Hero() {
                                     <th>Кількість</th>
                                     <th>Розмір</th>
                                     <th>Ціна</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -86,13 +104,15 @@ export default function Hero() {
                                     <tr key={i}>
                                         <td>{item.name}</td>
                                         <td>{item.quantity}</td>
-                                        <td>{item.size} см</td>
+                                        <td>{item.size} {item.type === 'drink' ? 'мл' : 'см'}</td>
                                         <td>{(item.price * item.quantity).toFixed(2).replace('.', ',')} $</td>
+                                        <td> <button onClick={() => removeItem(i)}>X</button></td>
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
                         <button onClick={handleConfirmOrder} className="hero__confirm-order">Підтвердити замовлення</button>
+                        <button onClick={handleClearOrder} className="hero__confirm-order">Очистити замовлення</button>
                     </div>
                 ) : (
                     <p>Корзина пуста</p>

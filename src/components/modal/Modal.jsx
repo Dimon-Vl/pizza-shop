@@ -1,4 +1,4 @@
-import './_modal.scss'
+import './modal.scss'
 
 export default function Modal({ isOpen, onClose, children, className}) {
     if (!isOpen) return null

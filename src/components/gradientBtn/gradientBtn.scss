@@ -1,0 +1,10 @@
+.gradient-btn {
+        padding: 6px 20px;
+        font-size: 12px;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        &__linear{ background: linear-gradient(135deg, #FF5924 0%, #FFA229 100%);}
+        &__brown{ background: #210A01;}
+    }

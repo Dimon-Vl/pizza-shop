@@ -1,16 +1,17 @@
-import Menu from './htmlParts/menu/Menu'
-import Footer from './htmlParts/footer/Footer'
-import Hero from './htmlParts/header/Hero'
+import Menu from './components/menu/Menu'
+import Footer from './components/footer/Footer'
+import Hero from './components/header/Hero'
 import './app.scss'
 function App() {
 
   return (
     <>
-      <Hero />
-      <Menu />
+      <div className='container'>
+        <Hero />
+        <Menu />
+      </div>
       <Footer />
     </>
-
   )
 }
 

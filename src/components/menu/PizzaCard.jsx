@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import './_pizzaCard.scss'
+import './pizzaCard.scss'
+import Modal from '../modal/Modal';
+import GradientBtn from '../gradientBtn/GradientBtn';
 
 import argentina from '../../assets/img/pizzaPhotos/argentina.png'
 import gribnaya from '../../assets/img/pizzaPhotos/gribnaya.png'
@@ -23,7 +25,8 @@ const images = {
 
 const PizzaCard = ({ product }) => {
   const [counter, setCount] = useState(1)
-  const [selectedSize, setSelectedSize] = useState(28)
+  const [selectedSize, setSelectedSize] = useState(product.size[0])
+  const [showModal, setShowModal] = useState(false)
 
   function inc() {
     setCount(val => val + 1)
@@ -35,20 +38,22 @@ const PizzaCard = ({ product }) => {
     }
   }
 
-  function addToBasket() {
-    let price = product.price
+  let price = product.price
 
-    if (selectedSize === 22) {
-      price = +(product.price * 0.85).toFixed(2)
-    } else if (selectedSize === 33) {
-      price = +(product.price * 1.25).toFixed(2)
-    }
+  if (selectedSize === 22) {
+    price = +(product.price * 0.85).toFixed(2)
+  } else if (selectedSize === 33) {
+    price = +(product.price * 1.25).toFixed(2)
+  }
+
+  function addToBasket() {
 
     const newItem = {
       name: product.name,
       price: price,
       quantity: counter,
-      size: selectedSize
+      size: selectedSize,
+      type: product.type,
     }
 
     const order = JSON.parse(localStorage.getItem('order')) || []
@@ -64,7 +69,7 @@ const PizzaCard = ({ product }) => {
     }
 
     localStorage.setItem('order', JSON.stringify(order))
-    console.log('Додано до замовлення!')
+    setShowModal(true)
   }
 
   return (
@@ -94,7 +99,7 @@ const PizzaCard = ({ product }) => {
 
         <div className="pizza-card__order">
           <div className="pizza-card__price">
-            {product.price.toFixed(2).replace('.', ',')}<span className="pizza-card__currency">$</span>
+            {(price * counter).toFixed(2).replace('.', ',')}<span className="pizza-card__currency">$</span>
           </div>
           <div className="pizza-card__counter">
             <button className="pizza-card__decrease" onClick={dec}>−</button>
@@ -103,8 +108,11 @@ const PizzaCard = ({ product }) => {
           </div>
         </div>
 
-        <button className="pizza-card__order-btn" onClick={addToBasket}>+ До замовллення</button>
+        <GradientBtn onClick={addToBasket}>+ До замовллення</GradientBtn>
       </div>
+      <Modal isOpen={showModal} onClose={() => setShowModal(false)} className="pizza-card">
+        <p className="pizza-card__modal-text">Замовлення додано!</p>
+      </Modal>
     </div>
   )
 }
