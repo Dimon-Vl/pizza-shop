@@ -16,6 +16,10 @@ export default function Hero() {
         setOrderData(JSON.parse(localStorage.getItem('order') || '[]'))
     }, [isModalOpen])
 
+    useEffect(() => {
+        localStorage.setItem('order', JSON.stringify(orderData))
+    }, [orderData])
+
     function handleConfirmOrder() {
         localStorage.removeItem('order')
         setOrderData([])
@@ -28,8 +32,8 @@ export default function Hero() {
         setOrderData([])
     }
 
-    function removeItem() {
-        
+    function removeItem(index) {
+        setOrderData(data => data.filter((_, i) => i !== index))
     }
 
     return (
